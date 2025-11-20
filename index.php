@@ -6,15 +6,18 @@ if($con==false)
 }
 if(isset($_POST['loginBtn']))
 {
-    $query="select * from login";
+     $username=$_POST['email'];
+    $query="select * from login where username='$username'";
     $result=mysqli_query($con,$query);
     $row=mysqli_fetch_assoc($result);
     $dbusername=$row['username'];
     $dbpassword=$row['password'];
-    $username=$_POST['email'];
+   
     $password=$_POST['password'];
     if(($username==$dbusername) && ($password=$dbpassword))
     {
+        session_start();
+        $_SESSION['username']=$username;
        $successmsg= "Login Successful";
        header("Location: home.php");
     }

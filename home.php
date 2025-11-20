@@ -33,7 +33,7 @@
             <ul class="nav nav-pills nav-stacked">
                 <li class="active"><a href="#">Home</a></li>
                 <li><a href="complaint.php">Add a Complaint</a></li>
-                <li><a href="#">View a Complaint</a></li>
+                <li><a href="viewcomplaint.php">View a Complaint</a></li>
                 <li><a href="#">LogOut</a></li>
             </ul>
         </div>
